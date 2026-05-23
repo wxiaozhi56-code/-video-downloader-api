@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: video-downloader-api
+    runtime: docker
+    plan: free
+    envVars:
+      - key: DOWNLOAD_DIR
+        value: /tmp/video_downloads
+      - key: MAX_FILE_SIZE_MB
+        value: "500"
+      - key: DOWNLOAD_TIMEOUT
+        value: "120"
